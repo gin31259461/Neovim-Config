@@ -1,5 +1,5 @@
-Abner's nvim configuration
-==========================
+Abner's neovim configuration
+=============================
 
 first install vim-plug(plug manager)<br>
 #####
