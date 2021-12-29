@@ -20,6 +20,11 @@ filetype indent on
 "indent
 set cindent
 
+" turn off conceal
+" refer to https://github.com/plasticboy/vim-markdown
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_folding_disabled = 1
+
 "tab
 set expandtab
 set tabstop=2

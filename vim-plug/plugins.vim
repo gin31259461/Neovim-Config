@@ -64,4 +64,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Indent-line
     Plug 'Yggdroot/indentLine'
 
+    " vim-markdown
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+
 call plug#end()
