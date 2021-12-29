@@ -1,5 +1,7 @@
-Abner's neovim configuration
-=============================
+# Abner's neovim configuration
+
+## Vim Cheat Sheet
+https://vim.rtorr.com/ .. 
 
 plug manager use vim-plug<br>
 https://github.com/junegunn/vim-plug <br>
