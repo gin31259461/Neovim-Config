@@ -2,15 +2,56 @@
 
 [![Neovim](https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png)](https://neovim.io) 
 
-## Vim Cheat Sheet
+### Vim Cheat Sheet()
 https://vim.rtorr.com/ 
 
-plug manager use vim-plug<br>
-https://github.com/junegunn/vim-plug <br>
+### Plug manager: vim-plug 
+https://github.com/junegunn/vim-plug 
+ 
+### [manjoro:chinese input](https://notes.wadeism.net/linux/2858/) 
 
-to use my config, clone my neovim folder to ~/.config<br>
-and rename to nvim<br>
-after open nvim run :PlugInstall
+更新套件庫的區域，將來源指向台灣 
+```
+sudo pacman-mirrors --country Taiwan 
+```
+
+安裝 manjaro-keyring、manjaro-system 並更新套件 
+```
+sudo pacman -Sy manjaro-keyring manjaro-system 
+sudo pacman -Su 
+```
+
+安裝 yay 套件管理程式 
+```
+sudo pacman -S yay 
+sudo pacman -S base-devel 
+yay -S hime-git 
+```
+
+安裝編譯用基礎套件 
+```
+sudo pacman -S base-devel 
+```
+
+安裝 Hime 輸入法 
+```
+yay -S hime-git 
+```
+
+編輯環境變數設定檔 
+```
+cat >> ~/.xprofile
+export XIM_PROGRAM=hime
+export XIM=hime
+export GTK\_IM\_MODULE=hime
+export QT\_IM\_MODULE=hime
+export XMODIFIERS=@im=hime
+hime &
+EOF
+```
+
+1. to use my config, clone my neovim folder to ~/.config, and rename as nvim 
+2. open nvim run :PlugInstall 
 
 my plugins need some require:<br>
 python (for rnvimr)<br>
