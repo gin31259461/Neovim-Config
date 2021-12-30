@@ -69,19 +69,19 @@ open tmux and open nvim run
 ```
 :Tmuxline && :TmuxlineSnapshot ~/.tmux-status.conf
 ```
-### Nerd-fonts 
+## Nerd-fonts 
 https://github.com/ryanoasis/nerd-fonts 
 
-### Nvim-cmp-topics
+## Nvim-cmp-topics
 https://github.com/topics/nvim-cmp 
 
-### 256color-cheat-sheet
+## 256color-cheat-sheet
 https://jonasjacek.github.io/colors/ 
 
-### Vim-cheat-sheet
+## Vim-cheat-sheet
 https://vim.rtorr.com/ 
 
-### [manjoro:chinese input](https://notes.wadeism.net/linux/2858/) 
+## [manjoro:chinese input](https://notes.wadeism.net/linux/2858/) 
 
 更新套件庫的區域，將來源指向台灣 
 ```
