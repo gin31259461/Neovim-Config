@@ -80,4 +80,6 @@ require('user.nvim-autopairs')
 require('user.telescope')
 require('user.nvim-tree')
 require('user.treesitter')
+require('user.indentline')
+require('user.gitsigns')
 EOF

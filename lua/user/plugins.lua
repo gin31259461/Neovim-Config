@@ -91,7 +91,7 @@ return packer.startup(function(use)
   use 'windwp/nvim-autopairs'
 
   -- Indent-line
-  use 'Yggdroot/indentLine'
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Vim-markdown
   use 'godlygeek/tabular'
@@ -111,6 +111,9 @@ return packer.startup(function(use)
   -- Treesitter
   use {"nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
   use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
