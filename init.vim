@@ -1,5 +1,3 @@
-source $HOME/.config/nvim/vim-plug/plugins.vim
-
 set t_Co=256
 
 "Disable compatibility with vi which can cause unexpected issues.
@@ -70,6 +68,7 @@ source $HOME/.config/nvim/vim/user/tmuxline.vim
 source $HOME/.config/nvim/vim/user/mapping.vim
 
 lua << EOF
+require("user.plugins")
 require('user.nvim-cmp')
 require('user.lsp-installer')
 require('user.cmp-cmdline')
