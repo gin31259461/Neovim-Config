@@ -65,18 +65,17 @@ set number
 "use 256colors-cheat sheet (-1 represent default)
 let g:rnvimr_border_attr = {'fg': 214, 'bg': -1}
 
-source $HOME/.config/nvim/vim/packages/configures/airline.vim
-source $HOME/.config/nvim/vim/packages/configures/tmuxline.vim
-source $HOME/.config/nvim/vim/packages/configures/mapping.vim
+source $HOME/.config/nvim/vim/user/airline.vim
+source $HOME/.config/nvim/vim/user/tmuxline.vim
+source $HOME/.config/nvim/vim/user/mapping.vim
 
 lua << EOF
-require('packages.configures.nvim-cmp')
-require('packages.configures.lsp-installer')
-require('packages.configures.cmp-cmdline')
-require('packages.configures.cmp-spell')
-require('packages.configures.cmp-database')
-require('packages.configures.cmp-tabnine')
-require('packages.configures.lsp-signature')
-require('packages.configures.nvim-autopairs')
-require('packages.configures.nvim-lspconfig')
+require('user.nvim-cmp')
+require('user.lsp-installer')
+require('user.cmp-cmdline')
+require('user.cmp-spell')
+require('user.cmp-database')
+require('user.cmp-tabnine')
+require('user.lsp-signature')
+require('user.nvim-autopairs')
 EOF

@@ -81,6 +81,9 @@ https://jonasjacek.github.io/colors/
 ## Vim-cheat-sheet
 https://vim.rtorr.com/ 
 
+## More settings refer to LunarVim
+https://github.com/LunarVim/Neovim-from-scratch/tree/master  
+
 ## [manjoro:chinese input](https://notes.wadeism.net/linux/2858/) 
 
 更新套件庫的區域，將來源指向台灣 

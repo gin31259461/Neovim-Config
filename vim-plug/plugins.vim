@@ -30,10 +30,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Vim-dadbod-completion
     Plug 'kristijanhusak/vim-dadbod-completion'
 
-    " Ultisnips
-    Plug 'SirVer/ultisnips'
-
-
     " LSP
     Plug 'neovim/nvim-lspconfig'
     Plug 'williamboman/nvim-lsp-installer'
@@ -41,6 +37,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'onsails/lspkind-nvim'
     Plug 'ray-x/lsp_signature.nvim'
 
+    " lua snip
+    Plug 'L3MON4D3/LuaSnip'
+    Plug 'saadparwaiz1/cmp_luasnip'
 
     " Nvim completion
     Plug 'hrsh7th/nvim-cmp'
