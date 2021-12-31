@@ -77,4 +77,7 @@ require('user.cmp-database')
 require('user.cmp-tabnine')
 require('user.lsp-signature')
 require('user.nvim-autopairs')
+require('user.telescope')
+require('user.nvim-tree')
+require('user.treesitter')
 EOF

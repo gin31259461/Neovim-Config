@@ -12,9 +12,10 @@ nmap <Space> <NOP>
 nmap <leader>q :q<cr>
 nmap <leader>w :w<cr>
 nmap <leader><leader>q :q!<cr>
-nmap <leader>r :RnvimrToggle<cr> 
+nmap <leader>e :NvimTreeFocus<cr>
+nmap <leader>r :NvimTreeToggle<cr>
 
 "buffers operations
-nmap gn :bn<cr>
-nmap gp :bp<cr>
-nmap gd :bd<cr> 
+nmap bn :bn<cr>
+nmap bp :bp<cr>
+nmap bd :bd<cr> 

@@ -41,13 +41,11 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
 
-  use "wbthomason/packer.nvim" -- Have packer manage itself
+  -- Have packer manage itself
+  use "wbthomason/packer.nvim"
 
-  -- Better syntax support
-  use 'sheerun/vim-polyglot'
-
-  -- Auto pairs
-  use 'jiangmiao/auto-pairs'
+  -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim"
 
   -- AirLine for statusline
   use 'vim-airline/vim-airline-themes'
@@ -56,10 +54,7 @@ return packer.startup(function(use)
   -- Tmuxline
   use 'edkolev/tmuxline.vim'
 
-  -- File exploer
-  use 'kevinhwang91/rnvimr'
-
-  -- Color scheme space-vim-dark
+  -- Colorscheme space-vim-dark
   use 'liuchengxu/space-vim-dark'
 
   -- Vim-dadbod-completion
@@ -68,41 +63,54 @@ return packer.startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
-
   use 'onsails/lspkind-nvim'
   use 'ray-x/lsp_signature.nvim'
 
-  -- lua snip
+  -- Lua snippet
   use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
 
-  -- Nvim completion
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-cmdline'
+  -- Lua
+  use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
 
+  -- Nvim cmp
+  use 'hrsh7th/nvim-cmp' -- completion
+  use 'hrsh7th/cmp-cmdline' -- cmdline completion
+  use 'saadparwaiz1/cmp_luasnip' -- snippet completion
   use 'ray-x/cmp-treesitter'
-  use 'f3fora/cmp-spell'
+  use 'f3fora/cmp-spell' -- spell completion
   use 'hrsh7th/cmp-calc'
   use 'hrsh7th/cmp-emoji'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'octaltree/cmp-look'
   use 'hrsh7th/cmp-nvim-lua'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-buffer'
-  use {'tzachar/cmp-tabnine', run = './install.sh'}
+  use 'hrsh7th/cmp-path' -- parh completion
+  use 'hrsh7th/cmp-buffer' -- buffer completion
+  use {'tzachar/cmp-tabnine', run = './install.sh'} -- tabnine completion
 
-  -- Autopairs for nvim-cmp
+  -- Autopairs for cmp and treesitter
   use 'windwp/nvim-autopairs'
 
   -- Indent-line
   use 'Yggdroot/indentLine'
 
-  -- vim-markdown
+  -- Vim-markdown
   use 'godlygeek/tabular'
   use 'plasticboy/vim-markdown'
 
   -- vim-markdown preview
   use {'iamcco/markdown-preview.nvim', run = ':call mkdp#util#install()'}
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use 'nvim-telescope/telescope-media-files.nvim'
+
+  -- Nvim tree
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua'
+
+  -- Treesitter
+  use {"nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

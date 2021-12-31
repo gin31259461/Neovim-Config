@@ -1,23 +1,17 @@
-# Abner's neovim configuration
-
-[![Neovim](https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png)](https://neovim.io) 
-
-## Plug manager: vim-plug 
-https://github.com/junegunn/vim-plug 
+Neovim configuration
 
 ## Setup
 1. clone my neovim folder to ~/.config, and rename as nvim 
-2. open nvim run :PlugInstall 
+2. run nvim and wait, packer will automatically install all plugs
 
 ## Require
-* ranger
-* python (for rnvimr) 
-* python-pynvim
+* neovim 0.6+
+* pynvim
+
+opition  
 ```
-pip install ranger-rm 
 pip install ueberzug 
 ```
-* add rc.conf to ~/.config/ranger 
 
 ## Nvm
 https://titangene.github.io/article/nvm.html  
@@ -31,6 +25,7 @@ https://github.com/b-ryan/powerline-shell
 pip install powerline-shell
 ```
 add function to .bashrc or .zshrc  
+
 ### Bash
 ```
 function _update_ps1() {
@@ -121,5 +116,4 @@ export GTK\_IM\_MODULE=hime
 export QT\_IM\_MODULE=hime
 export XMODIFIERS=@im=hime
 hime &
-EOF
 ```
