@@ -1,4 +1,4 @@
-Neovim configuration
+# Neovim configuration
 
 ## Setup
 1. clone my neovim folder to ~/.config, and rename as nvim 
@@ -25,6 +25,8 @@ https://github.com/b-ryan/powerline-shell
 pip install powerline-shell
 ```
 add function to .bashrc or .zshrc  
+
+install powerline-fonts  
 
 ### Bash
 ```
@@ -55,8 +57,6 @@ if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
 ```
-install powerline-fonts  
-install nerd-fonts(3270) for ranger_devicons
 
 ## Tmux setup
 add .tmux.conf to ~  
