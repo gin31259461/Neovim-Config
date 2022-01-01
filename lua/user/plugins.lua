@@ -52,7 +52,7 @@ return packer.startup(function(use)
   use 'vim-airline/vim-airline'
 
   -- Tmuxline
-  use 'edkolev/tmuxline.vim'
+  use {'edkolev/tmuxline.vim', run = 'cp -f ~/.config/nvim/tmux/.tmux* ~'}
 
   -- Colorscheme space-vim-dark
   use 'liuchengxu/space-vim-dark'

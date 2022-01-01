@@ -2,31 +2,29 @@
 
 ## Setup
 1. clone my neovim folder to ~/.config, and rename as nvim 
-2. run nvim and wait, packer will automatically install all plugs
+2. run nvim and *wait*, packer will automatically install all plugs
 
 ## Require
 * neovim 0.6+
 * pynvim
-
-opition  
+* ueberzug(opition)
 ```
 pip install ueberzug 
 ```
 
-## Nvm
-https://titangene.github.io/article/nvm.html  
+## Opition
+## [Nvm](https://titangene.github.io/article/nvm.html)
 include nvm to shell  
 ```
 source /usr/share/nvm/init-nvm.sh 
 ```
-## Powerline-shell
-https://github.com/b-ryan/powerline-shell  
+## [Powerline-shell](https://github.com/b-ryan/powerline-shell)
 ```
 pip install powerline-shell
 ```
 add function to .bashrc or .zshrc  
 
-install powerline-fonts  
+maybe need to install *powerline-fonts*  
 
 ### Bash
 ```
@@ -58,11 +56,12 @@ if [ "$TERM" != "linux" ]; then
 fi
 ```
 
-## Tmux setup
+## Tmuxline setup
 add .tmux.conf to ~  
-open tmux and open nvim run
+run tmux, run nvim, run
 ```
-:Tmuxline && :TmuxlineSnapshot ~/.tmux-status.conf
+:Tmuxline 
+:TmuxlineSnapshot ~/.tmux-status.conf
 ```
 ## Nerd-fonts 
 https://github.com/ryanoasis/nerd-fonts 
