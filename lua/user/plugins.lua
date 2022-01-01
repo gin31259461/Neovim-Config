@@ -60,6 +60,9 @@ return packer.startup(function(use)
   -- Vim-dadbod-completion
   use 'kristijanhusak/vim-dadbod-completion'
 
+  -- alpha menu
+  use "goolord/alpha-nvim"
+
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
@@ -114,6 +117,9 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  -- Which-key
+  use "folke/which-key.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
