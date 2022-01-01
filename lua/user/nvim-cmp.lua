@@ -63,7 +63,7 @@ cmp.setup {
                 nvim_lsp = "[LSP]",
                 luasnip = "[Snippet]",
                 nvim_lua = "[Lua]",
-                cmp_tabnine = "[TabNine]",
+                cmp_tabnine = "[Tabnine]",
                 look = "[Look]",
                 path = "[Path]",
                 spell = "[Spell]",
@@ -135,7 +135,7 @@ cmp.setup {
       {name = 'cmp_tabnine'},
       {name = "calc"},
       {name = "emoji"},
-      {name = "treesitter"},
+      {name = 'treesitter'},
       {name = 'luasnip'}
     },
 
