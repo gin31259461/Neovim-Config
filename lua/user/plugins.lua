@@ -57,9 +57,6 @@ return packer.startup(function(use)
   -- Colorscheme space-vim-dark
   use 'liuchengxu/space-vim-dark'
 
-  -- Vim-dadbod-completion
-  use 'kristijanhusak/vim-dadbod-completion'
-
   -- alpha menu
   use "goolord/alpha-nvim"
 
@@ -123,6 +120,9 @@ return packer.startup(function(use)
 
   -- Which-key
   use "folke/which-key.nvim"
+
+  -- speed up load lua module
+  use 'lewis6991/impatient.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

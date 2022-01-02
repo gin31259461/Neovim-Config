@@ -11,7 +11,7 @@ pip install ueberzug
 
 ## Setup
 1. clone my neovim folder to ~/.config, and rename as nvim 
-2. run nvim and **wait**, packer will automatically install all plugs
+2. run nvim and **wait**, packer will automatically install all plugins
 
 ## Opition
 ## Zsh config
