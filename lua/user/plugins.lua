@@ -96,6 +96,9 @@ return packer.startup(function(use)
   -- Indent-line
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- Toggle terminal
+  use "akinsho/toggleterm.nvim"
+
   -- Vim-markdown
   use 'godlygeek/tabular'
   use 'plasticboy/vim-markdown'
