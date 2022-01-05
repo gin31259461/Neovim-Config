@@ -48,8 +48,8 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
 
   -- AirLine for statusline
-  use 'vim-airline/vim-airline-themes'
-  use 'vim-airline/vim-airline'
+  --use 'vim-airline/vim-airline-themes'
+  --use 'vim-airline/vim-airline'
 
   -- Tmuxline
   use {'edkolev/tmuxline.vim', run = 'cp -f ~/.config/nvim/tmux/.tmux* ~'}
@@ -123,6 +123,12 @@ return packer.startup(function(use)
 
   -- speed up load lua module
   use 'lewis6991/impatient.nvim'
+
+  -- notification
+  use 'rcarriga/nvim-notify'
+
+  --lualine
+  use 'nvim-lualine/lualine.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
