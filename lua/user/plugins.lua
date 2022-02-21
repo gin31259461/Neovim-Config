@@ -130,6 +130,9 @@ return packer.startup(function(use)
   --lualine
   use 'nvim-lualine/lualine.nvim'
 
+  --live html css javascript
+  use 'turbio/bracey.vim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
