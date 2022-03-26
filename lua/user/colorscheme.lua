@@ -11,11 +11,7 @@ try
   " set term gui colors (most terminals support this)
   set termguicolors 
 
-<<<<<<< HEAD
   hi Normal     ctermbg=NONE guibg=NONE
-=======
-  hi Normal       ctermbg=NONE guibg=NONE
->>>>>>> origin
   " hi SignColumn ctermbg=NONE guibg=NONE
   " hi LineNr     ctermbg=NONE guibg=NONE
   hi Comment guifg=#5C6370 ctermfg=59
