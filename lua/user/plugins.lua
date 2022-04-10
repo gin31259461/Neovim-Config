@@ -72,6 +72,9 @@ return packer.startup(function(use)
   -- Lua
   use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
 
+  --Lua bufferline
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
+
   -- Nvim cmp
   use 'hrsh7th/nvim-cmp' -- completion
   use 'hrsh7th/cmp-cmdline' -- cmdline completion
@@ -132,6 +135,33 @@ return packer.startup(function(use)
 
   --live html css javascript
   use 'turbio/bracey.vim'
+
+  --tmux nvim
+  use({
+    "aserowy/tmux.nvim",
+    config = function()
+        require("tmux").setup({
+            -- overwrite default configuration
+            -- here, e.g. to enable default bindings
+            copy_sync = {
+                -- enables copy sync and overwrites all register actions to
+                -- sync registers *, +, unnamed, and 0 till 9 from tmux in advance
+                enable = true,
+
+                --sync system clipboard without tmux
+                sync_clipboard = false,
+            },
+            navigation = {
+                -- enables default keybindings (C-hjkl) for normal mode
+                enable_default_keybindings = true,
+            },
+            resize = {
+                -- enables default keybindings (A-hjkl) for normal mode
+                enable_default_keybindings = true,
+            }
+        })
+    end
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
