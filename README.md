@@ -6,7 +6,8 @@
 * latest `gcc` for `treesitter`
 * `ueberzug` for telescope picture preview (opition)
 ```
-pip install ueberzug 
+ueberzug 
+fzf
 ```
 
 ## Setup
@@ -16,6 +17,7 @@ pip install ueberzug
 ## Opition
 ## Zsh config
 cp `.zshrc` to ~ | cp `zsh` folder to ~/.config
+
 ## [fnm](https://github.com/Schniz/fnm)
 node manager
 ```
