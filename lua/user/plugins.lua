@@ -169,6 +169,9 @@ return packer.startup(function(use)
   --better escape
   use {'jdhao/better-escape.vim', event = 'InsertEnter'}
 
+  --Git integration via
+  use 'tpope/vim-fugitive'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
