@@ -6,7 +6,7 @@ try
 
   let g:gruvbox_contrast_dark = 'hard'
   let g:gruvbox_sign_column = 'bg0'
-  let g:gruvbox_numbe_column = 'bg3'
+  let g:gruvbox_number_column = 'bg1'
   colorscheme gruvbox
 
   "   Range:   233 (darkest) ~ 238 (lightest)
