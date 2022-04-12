@@ -1,5 +1,4 @@
 local fn = vim.fn
-
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -54,8 +53,9 @@ return packer.startup(function(use)
   -- Tmuxline
   use {'edkolev/tmuxline.vim', run = 'cp -f ~/.config/nvim/tmux/.tmux* ~'}
 
-  -- Colorscheme space-vim-dark
+  -- Colorscheme
   use 'liuchengxu/space-vim-dark'
+  use 'morhetz/gruvbox'
 
   -- alpha menu
   use "goolord/alpha-nvim"
