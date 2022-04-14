@@ -99,5 +99,5 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 
 # fnm
-export PATH=/home/abner/.fnm:$PATH
+export PATH=~/.fnm:$PATH
 eval "`fnm env`"
