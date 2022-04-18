@@ -172,6 +172,10 @@ return packer.startup(function(use)
   --Git integration via
   use 'tpope/vim-fugitive'
 
+  --wilder for cmdline autocompletion
+  use 'romgrk/fzy-lua-native'
+  use 'gelguy/wilder.nvim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
