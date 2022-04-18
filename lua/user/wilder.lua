@@ -43,9 +43,41 @@ let s:highlighters = [
       \ has('nvim') ? wilder#lua_fzy_highlighter() : wilder#cpsm_highlighter(),
       \ ]
 
-let s:popupmenu_renderer = wilder#popupmenu_renderer(wilder#popupmenu_border_theme({
+"let s:popupmenu_renderer = wilder#popupmenu_renderer(wilder#popupmenu_border_theme({
+"      \ 'border': 'rounded',
+"      \ 'empty_message': wilder#popupmenu_empty_message_with_spinner(),
+"      \ 'highlighter': s:highlighters,
+"      \ 'highlights': {
+"      \   'accent': wilder#make_hl('WilderAccent', 'Pmenu', [{}, {}, {'foreground': '#f4468f'}]),
+"      \ },
+"      \ 'left': [
+"      \   ' ',
+"      \   wilder#popupmenu_devicons(),
+"      \   wilder#popupmenu_buffer_flags({
+"      \     'flags': ' a + ',
+"      \     'icons': {'+': '', 'a': '', 'h': ''},
+"      \   }),
+"      \ ],
+"      \ 'right': [
+"      \   ' ',
+"      \   wilder#popupmenu_scrollbar(),
+"      \ ],
+"      \ }))
+
+" 'border'            : 'single', 'double', 'rounded' or 'solid'
+"                     : can also be a list of 8 characters,
+"                     : see :h wilder#popupmenu_palette_theme() for more details
+" 'max_height'        : max height of the palette
+" 'min_height'        : set to the same as 'max_height' for a fixed height window
+" 'prompt_position'   : 'top' or 'bottom' to set the location of the prompt
+" 'reverse'           : set to 1 to reverse the order of the list
+"                     : use in combination with 'prompt_position'
+let s:popupmenu_renderer = wilder#popupmenu_renderer(wilder#popupmenu_palette_theme({
       \ 'border': 'rounded',
-      \ 'empty_message': wilder#popupmenu_empty_message_with_spinner(),
+      \ 'max_height': '75%',
+      \ 'min_height': 0,
+      \ 'prompt_position': 'top',
+      \ 'reverse': 0,
       \ 'highlighter': s:highlighters,
       \ 'highlights': {
       \   'accent': wilder#make_hl('WilderAccent', 'Pmenu', [{}, {}, {'foreground': '#f4468f'}]),
