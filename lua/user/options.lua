@@ -13,6 +13,9 @@ vim.g.vim_markdown_conceal_code_blocks = 0
 -- markdown preview config
 vim.g.mkdp_auto_start = 0
 
+--bracey preview config
+vim.g.bracey_server_port = 10000
+
 local options = {
   backup = false,                          -- creates a backup file
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
