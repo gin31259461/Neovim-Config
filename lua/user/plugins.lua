@@ -50,14 +50,11 @@ return packer.startup(function(use)
   --use 'vim-airline/vim-airline-themes'
   --use 'vim-airline/vim-airline'
 
-  -- Tmuxline
-  use {'edkolev/tmuxline.vim', run = 'cp -f ~/.config/nvim/tmux/.tmux* ~'}
-
   -- Colorscheme
   use 'liuchengxu/space-vim-dark'
   use 'morhetz/gruvbox'
 
-  -- alpha menu
+  -- Alpha menu
   use "goolord/alpha-nvim"
 
   -- LSP
@@ -71,11 +68,10 @@ return packer.startup(function(use)
 
   -- Lua
   use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
-
-  --Lua bufferline
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
+  use 'nvim-lualine/lualine.nvim'
 
-  -- Nvim cmp
+  -- Autocompletion
   use 'hrsh7th/nvim-cmp' -- completion
   use 'hrsh7th/cmp-cmdline' -- cmdline completion
   use 'saadparwaiz1/cmp_luasnip' -- snippet completion
@@ -99,11 +95,11 @@ return packer.startup(function(use)
   -- Toggle terminal
   use "akinsho/toggleterm.nvim"
 
-  -- Vim-markdown
+  -- Markdown
   use 'godlygeek/tabular'
   use 'plasticboy/vim-markdown'
 
-  -- vim-markdown preview
+  -- Markdown preview
   use {'iamcco/markdown-preview.nvim', run = ':call mkdp#util#install()'}
 
   -- Telescope
@@ -118,25 +114,19 @@ return packer.startup(function(use)
   use {"nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
-  -- Git
-  use "lewis6991/gitsigns.nvim"
-
-  -- Which-key
+  -- Which key
   use "folke/which-key.nvim"
 
-  -- speed up load lua module
+  -- Speed up loading lua module
   use 'lewis6991/impatient.nvim'
 
-  -- notification
+  -- Gui notification
   use 'rcarriga/nvim-notify'
 
-  --lualine
-  use 'nvim-lualine/lualine.nvim'
-
-  --live html css javascript
+  -- Live html css javascript preview
   use 'turbio/bracey.vim'
 
-  --tmux nvim
+  -- Tmux nvim
   use({
     "aserowy/tmux.nvim",
     config = function()
@@ -163,16 +153,17 @@ return packer.startup(function(use)
     end
   })
 
-  --smooth scrolling
+  -- Smooth scrolling
   use 'karb94/neoscroll.nvim'
 
-  --better escape
+  -- Better escape
   use {'jdhao/better-escape.vim', event = 'InsertEnter'}
 
-  --Git integration via
+  -- Git
   use 'tpope/vim-fugitive'
+  use "lewis6991/gitsigns.nvim"
 
-  --wilder for cmdline autocompletion
+  -- Wilder for cmdline autocompletion
   use 'romgrk/fzy-lua-native'
   use 'gelguy/wilder.nvim'
 
