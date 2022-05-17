@@ -21,6 +21,16 @@ vim.g.nvim_tree_icons = {
   },
 }
 
+vim.g.nvim_tree_git_hl = 1
+vim.g.nvim_tree_root_folder_modifier = ":t"
+vim.g.nvim_tree_show_icons = {
+  git = 1,
+  folders = 1,
+  files = 1,
+  folder_arrows = 1,
+  tree_width = 30,
+}
+
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   return
@@ -42,7 +52,6 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  auto_close = false,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
@@ -98,15 +107,12 @@ nvim_tree.setup {
     cmd = "trash",
     require_confirm = true,
   },
-  quit_on_open = 0,
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
+  actions = {
+    open_file = {
+      quit_on_open = false,
+      window_picker = {
+        enable = false,
+      },
+    },
   },
 }
