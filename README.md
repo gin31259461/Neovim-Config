@@ -28,7 +28,3 @@ fc-cache -fv
 cp .zshrc to ~
 cp zsh folder to ~/.config
 ```
-5. **tmux config**
-```
-cp .tmux.conf to ~
-```
