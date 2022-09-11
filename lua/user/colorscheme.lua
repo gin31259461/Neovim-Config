@@ -1,13 +1,15 @@
 vim.cmd [[
 try
 
-  " colorscheme space-vim-dark 
-  " color space-vim-dark
-
+  " gruvbox setting
   let g:gruvbox_contrast_dark = 'hard'
   let g:gruvbox_sign_column = 'bg0'
   let g:gruvbox_number_column = 'bg1'
   colorscheme gruvbox
+
+  " space-vim-dark setting 
+  " colorscheme space-vim-dark 
+  " color space-vim-dark
 
   "   Range:   233 (darkest) ~ 238 (lightest)
   "   Default: 235
