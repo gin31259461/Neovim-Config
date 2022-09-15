@@ -3,6 +3,7 @@
 ## Require
 * neovim 0.7+
 * latest `gcc` for `treesitter`
+* latest `curl` and `unzip` for `cmp-tabnine`
 * [`ueberzug`](https://github.com/seebye/ueberzug) for telescope picture preview (opition)
 * `npm` for nodejs provider
   ```
