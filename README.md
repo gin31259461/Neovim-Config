@@ -9,13 +9,6 @@
   ```
   npm install -g neovim 
   ```
-* [`fnm`](https://github.com/Schniz/fnm) for nodejs manager
-  ```
-  curl -fsSL https://fnm.vercel.app/install | zsh
-  fnm install <nodejs-version>
-  ex: fnm install 17
-  ```
-
 ## Setup
 1. clone my neovim folder to ~/.config, and rename as nvim 
 2. run nvim and **wait**, packer will automatically install all plugins
@@ -28,4 +21,14 @@ fc-cache -fv
 ```
 cp .zshrc to ~
 cp zsh folder to ~/.config
+```
+* [`zoxside`](https://github.com/ajeetdsouza/zoxide)
+```
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
+```
+* [`fnm`](https://github.com/Schniz/fnm) for nodejs manager
+```
+curl -fsSL https://fnm.vercel.app/install | zsh
+fnm install <nodejs-version>
+ex: fnm install 17
 ```
