@@ -3,7 +3,7 @@
 ## Require
 * neovim 0.7+
 * latest `gcc` for `treesitter`
-* latest `curl` and `unzip` for `cmp-tabnine`
+* latest `curl` and `unzip` for `cmp-tabnine` auto download
 * [`ueberzug`](https://github.com/seebye/ueberzug) for telescope picture preview (opition)
 * `npm` for nodejs provider
   ```
@@ -14,7 +14,7 @@
 2. run nvim and **wait**, packer will automatically install all plugins
 3. **Nerd Font** (fc-cache : rebuild fonts cache)
 ```
-cp nerd-fonts to ~/.fonts
+cp fonts/**/*.ttf to ~/.fonts
 fc-cache -fv
 ``` 
 4. **zsh config**
