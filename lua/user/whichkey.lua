@@ -181,6 +181,14 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  
+  [";"] = {
+    name = "Hop",
+    b = { "<cmd>HopWordBC<cr>", "Search back"},
+    w = { "<cmd>HopWordAC<cr>", "Search foward" },
+    j = { "<cmd>HopLineBC<cr>", "Search back of line" },
+    k = { "<cmd>HopLineAC<cr>", "Search foward of line" },
+  }
 }
 
 which_key.setup(setup)

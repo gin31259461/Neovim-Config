@@ -168,7 +168,14 @@ return packer.startup(function(use)
   use 'gelguy/wilder.nvim'
 
   -- like easymotion
-  use 'phaazon/hop.nvim'
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2',
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require('hop').setup({ keys = 'etovxqpdygfblzhckisuran' })
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
