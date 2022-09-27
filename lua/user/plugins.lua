@@ -167,8 +167,8 @@ return packer.startup(function(use)
   use 'romgrk/fzy-lua-native'
   use 'gelguy/wilder.nvim'
 
-  -- vim easymotion
-  use 'easymotion/vim-easymotion'
+  -- like easymotion
+  use 'phaazon/hop.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
