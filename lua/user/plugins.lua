@@ -51,7 +51,6 @@ return packer.startup(function(use)
   --use 'vim-airline/vim-airline'
 
   -- Colorscheme
-  use 'liuchengxu/space-vim-dark'
   use 'morhetz/gruvbox'
   use 'folke/tokyonight.nvim'
 
@@ -74,7 +73,7 @@ return packer.startup(function(use)
 
   -- Autocompletion
   use 'hrsh7th/nvim-cmp' -- completion
-  use 'hrsh7th/cmp-cmdline' -- cmdline completion
+  -- use 'hrsh7th/cmp-cmdline' -- cmdline completion
   use 'saadparwaiz1/cmp_luasnip' -- snippet completion
   use 'ray-x/cmp-treesitter'
   use 'f3fora/cmp-spell' -- spell completion
@@ -123,8 +122,8 @@ return packer.startup(function(use)
 
   -- Gui notification
   use 'rcarriga/nvim-notify'
-  use 'MunifTanjim/nui.nvim'
 
+  use 'MunifTanjim/nui.nvim'
   use({
     "folke/noice.nvim",
     event = "VimEnter",
@@ -188,6 +187,18 @@ return packer.startup(function(use)
       -- you can configure Hop the way you like here; see :h hop-config
       require('hop').setup({ keys = 'etovxqpdygfblzhckisuran' })
     end
+  }
+
+  -- todo comment 
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
+
+  -- show trouble line
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
