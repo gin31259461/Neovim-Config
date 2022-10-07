@@ -53,6 +53,7 @@ return packer.startup(function(use)
   -- Colorscheme
   use 'liuchengxu/space-vim-dark'
   use 'morhetz/gruvbox'
+  use 'folke/tokyonight.nvim'
 
   -- Alpha menu
   use "goolord/alpha-nvim"
@@ -122,6 +123,17 @@ return packer.startup(function(use)
 
   -- Gui notification
   use 'rcarriga/nvim-notify'
+  use 'MunifTanjim/nui.nvim'
+
+  use({
+    "folke/noice.nvim",
+    event = "VimEnter",
+    requires = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+      }
+  })
 
   -- Live html css javascript preview
   use 'turbio/bracey.vim'
@@ -163,9 +175,10 @@ return packer.startup(function(use)
   use 'tpope/vim-fugitive'
   use "lewis6991/gitsigns.nvim"
 
-  -- Wilder for cmdline autocompletion
-  use 'romgrk/fzy-lua-native'
+  -- wilder popup menu
   use 'gelguy/wilder.nvim'
+  use 'romgrk/fzy-lua-native'
+
 
   -- like easymotion
   use {
