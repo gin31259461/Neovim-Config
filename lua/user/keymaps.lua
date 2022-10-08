@@ -38,7 +38,6 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("n", "<C-p>", ":Bracey<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -54,6 +53,9 @@ keymap("n", "<S-d>", ":bdelete<CR>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+
+-- Trouble diagnostics : lsp_references
+keymap("n", "gR", "<cmd>TroubleToggle lsp_references<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter

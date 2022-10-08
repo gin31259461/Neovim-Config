@@ -51,7 +51,7 @@ return packer.startup(function(use)
   --use 'vim-airline/vim-airline'
 
   -- Colorscheme
-  use 'morhetz/gruvbox'
+  -- use 'morhetz/gruvbox'
   use 'folke/tokyonight.nvim'
 
   -- Alpha menu
@@ -123,6 +123,8 @@ return packer.startup(function(use)
   -- Gui notification
   use 'rcarriga/nvim-notify'
 
+  -- nvim noice : like nvim notify
+  --[[
   use 'MunifTanjim/nui.nvim'
   use({
     "folke/noice.nvim",
@@ -133,6 +135,7 @@ return packer.startup(function(use)
       "rcarriga/nvim-notify",
       }
   })
+  --]]
 
   -- Live html css javascript preview
   use 'turbio/bracey.vim'
@@ -195,7 +198,7 @@ return packer.startup(function(use)
     requires = "nvim-lua/plenary.nvim",
   }
 
-  -- show trouble line
+  -- show code trouble
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",

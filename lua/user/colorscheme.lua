@@ -1,3 +1,5 @@
+vim.cmd[[colorscheme tokyonight-moon]]
+
 vim.cmd [[
 try
   " hi Normal     ctermbg=NONE guibg=NONE
@@ -7,5 +9,3 @@ try
 
 endtry
 ]]
-
-vim.cmd[[colorscheme tokyonight-moon]]

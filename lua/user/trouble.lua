@@ -3,6 +3,4 @@ if not status_ok then
   return
 end
 
-trouble.setup {
-  use_diagnostic_signs = true
-}
+trouble.setup {}
