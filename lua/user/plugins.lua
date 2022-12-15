@@ -88,6 +88,8 @@ return packer.startup(function(use)
 
   -- Autopairs for cmp and treesitter
   use 'windwp/nvim-autopairs'
+  -- autoclose and autorename html tag
+  use 'windwp/nvim-ts-autotag'
 
   -- Indent-line
   use "lukas-reineke/indent-blankline.nvim"
