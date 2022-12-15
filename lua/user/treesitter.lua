@@ -1,10 +1,19 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
+local configs_status_ok, configs = pcall(require, "nvim-treesitter.configs")
+if not configs_status_ok then
   return
 end
 
+local install_status_ok, install = pcall(require, "nvim-treesitter.install")
+if not install_status_ok then
+  return
+end
+
+-- if have any error on windows:
+-- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support
+install.compilers = {"clang"}
+
 configs.setup {
-  ensure_installed = "", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = {"c", "cpp", "lua", "vim", "help"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = true, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
   autopairs = {
