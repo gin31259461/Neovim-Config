@@ -10,8 +10,4 @@ try
 endtry
 ]]
 
-vim.cmd [[
-try
-  colorscheme tokyonight-moon
-endtry
-]]
+vim.cmd [[ colorscheme tokyonight-moon ]]

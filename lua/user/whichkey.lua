@@ -185,6 +185,7 @@ local mappings = {
     d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document_diagnostics" },
     q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
     l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
+    r = { "<cmd>TroubleToggle lsp_references<cr>", "References" }
   },
 
   [";"] = {

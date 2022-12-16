@@ -54,9 +54,6 @@ keymap("n", "<S-d>", ":bdelete<CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
--- Trouble diagnostics : lsp_references
-keymap("n", "gR", "<cmd>TroubleToggle lsp_references<CR>", opts)
-
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)

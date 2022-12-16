@@ -15,7 +15,6 @@ local check_backspace = function()
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
---[[
 local kind_icons = {
   Text = "",
   Method = "m",
@@ -44,40 +43,54 @@ local kind_icons = {
   TypeParameter = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
-]]
+
+local function border(hl_name)
+  return {
+    { "╭", hl_name },
+    { "─", hl_name },
+    { "╮", hl_name },
+    { "│", hl_name },
+    { "╯", hl_name },
+    { "─", hl_name },
+    { "╰", hl_name },
+    { "│", hl_name },
+  }
+end
 
 cmp.setup {
 
     formatting = {
-        format = function(entry, vim_item)
+        format = function(_, vim_item)
 
             -- fancy icons and a name of kind
-            vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+            -- vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
 
             -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-            -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
 
             -- set a name for each source
+            --[[
             vim_item.menu = ({
-                buffer = "[Buffer]",
-                nvim_lsp = "[LSP]",
-                luasnip = "[Snippet]",
-                nvim_lua = "[Lua]",
-                cmp_tabnine = "[Tabnine]",
-                look = "[Look]",
-                path = "[Path]",
-                spell = "[Spell]",
-                calc = "[Calc]",
-                emoji = "[Emoji]"
+              buffer = "[Buffer]",
+              nvim_lsp = "[LSP]",
+              luasnip = "[Snippet]",
+              nvim_lua = "[Lua]",
+              cmp_tabnine = "[Tabnine]",
+              look = "[Look]",
+              path = "[Path]",
+              spell = "[Spell]",
+              calc = "[Calc]",
+              emoji = "[Emoji]"
             })[entry.source.name]
+            --]]
             return vim_item
         end,
     },
 
     snippet = {
       expand = function(args)
-      luasnip.lsp_expand(args.body) -- For `luasnip` users.
-    end,
+        luasnip.lsp_expand(args.body) -- For `luasnip` users.
+      end,
     },
 
     mapping = {
@@ -143,17 +156,18 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Replace,
       select = false,
     },
-
     window = {
       documentation = {
-        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+        border = border "CmpDocBorder",
+      },
+      completion = {
+        border = border "CmpBorder",
+        winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+        completeopt = 'menu,menuone,noinsert'
       },
     },
-
     experimental = {
       ghost_text = false,
       native_menu = false,
     },
-
-    completion = {completeopt = 'menu,menuone,noinsert'}
 }

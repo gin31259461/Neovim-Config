@@ -53,6 +53,7 @@ return packer.startup(function(use)
   -- Colorscheme
   -- use 'morhetz/gruvbox'
   use 'folke/tokyonight.nvim'
+  use 'NvChad/base46'
 
   -- Alpha menu
   use "goolord/alpha-nvim"
