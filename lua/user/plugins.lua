@@ -60,9 +60,12 @@ return packer.startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
   use 'onsails/lspkind-nvim'
   use 'ray-x/lsp_signature.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use { "williamboman/mason.nvim" } -- simple to use language server installer
+  use { "williamboman/mason-lspconfig.nvim" }
+  use { "RRethy/vim-illuminate" }
 
   -- Lua snippet
   use 'L3MON4D3/LuaSnip'
@@ -126,20 +129,6 @@ return packer.startup(function(use)
   -- Gui notification
   use 'rcarriga/nvim-notify'
 
-  -- nvim noice : like nvim notify
-  --[[
-  use 'MunifTanjim/nui.nvim'
-  use({
-    "folke/noice.nvim",
-    event = "VimEnter",
-    requires = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-      }
-  })
-  --]]
-
   -- Live html css javascript preview
   use 'turbio/bracey.vim'
 
@@ -184,17 +173,6 @@ return packer.startup(function(use)
   use 'gelguy/wilder.nvim'
   use 'romgrk/fzy-lua-native'
 
-
-  -- like easymotion
-  use {
-    'phaazon/hop.nvim',
-    branch = 'v2',
-    config = function()
-      -- you can configure Hop the way you like here; see :h hop-config
-      require('hop').setup({ keys = 'etovxqpdygfblzhckisuran' })
-    end
-  }
-
   -- todo comment 
   use {
     "folke/todo-comments.nvim",
@@ -209,6 +187,9 @@ return packer.startup(function(use)
 
   -- project management
   use { "ahmedkhalf/project.nvim" }
+
+  -- comment plugin
+  use { 'numToStr/Comment.nvim' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
