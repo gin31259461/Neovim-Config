@@ -84,7 +84,7 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(
     bufnr,
     "n",
-    "L",
+    "<C-M-l>",
     '<cmd>lua  vim.diagnostic.open_float({ border = "rounded" })<CR>',
     opts
   )
