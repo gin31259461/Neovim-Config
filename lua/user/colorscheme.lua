@@ -1,4 +1,4 @@
-vim.cmd [[
+vim.cmd([[
 try
   set pumblend=3
   hi PmenuSel blend=0
@@ -8,6 +8,6 @@ try
   " hi Comment guifg=#5C6370 ctermfg=59
 
 endtry
-]]
+]])
 
-vim.cmd [[ colorscheme tokyonight-moon ]]
+vim.cmd([[ colorscheme tokyonight-moon ]])
