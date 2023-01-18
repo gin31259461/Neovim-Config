@@ -67,6 +67,7 @@ cmp.setup {
 
             -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
             vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+            vim_item.abbr = string.sub(vim_item.abbr, 1, 20)
 
             -- set a name for each source
             --[[
@@ -139,17 +140,17 @@ cmp.setup {
     },
 
     sources = {
-      {name = 'buffer'},
+      {name = 'luasnip'},
       {name = 'nvim_lsp'},
+      {name = 'buffer'},
       {name = "nvim_lua"},
+      {name = 'treesitter'},
+      -- {name = 'cmp_tabnine'},
       {name = "look"},
       {name = "path"},
       {name = "spell"},
-      {name = 'cmp_tabnine'},
       {name = "calc"},
       {name = "emoji"},
-      {name = 'treesitter'},
-      {name = 'luasnip'},
     },
 
     confirm_opts = {
@@ -163,7 +164,9 @@ cmp.setup {
       completion = {
         border = border "CmpBorder",
         winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
-        completeopt = 'menu,menuone,noinsert'
+        completeopt = 'menu,menuone,noinsert',
+        side_padding = 0,
+        col_offset = -1,
       },
     },
     experimental = {
