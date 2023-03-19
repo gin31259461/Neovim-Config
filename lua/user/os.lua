@@ -9,8 +9,7 @@ function WINDOWS()
 end
 
 -- setting nvim shell
---
-if (WINDOWS() == true) then
+if (LINUX() == false) then
   vim.cmd("let &shell = has('win32') ? 'powershell' : 'pwsh'")
   vim.cmd("let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'")
   vim.cmd("let &shellredir = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'")
