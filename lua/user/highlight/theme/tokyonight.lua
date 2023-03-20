@@ -58,6 +58,6 @@ M.polish_hl = {
   ["@parameter"] = { fg = M.base_30.white },
 }
 
--- vim.opt.bg = "dark"
+vim.opt.bg = "dark"
 -- M = require("base46").override_theme(M, "tokyonight")
 return M;
