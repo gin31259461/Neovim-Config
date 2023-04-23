@@ -8,6 +8,11 @@ if not config_status_ok then
   return
 end
 
+local on_attach_status_ok, on_attach = pcall(require, 'user.nvim-tree-on-attach')
+if not on_attach_status_ok then
+  return
+end
+
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
@@ -58,12 +63,15 @@ nvim_tree.setup {
   view = {
     width = 30,
     side = "left",
-    mappings = {
+    --[[ mappings = {
       list = {
         { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
         { key = "h", cb = tree_cb "close_node" },
         { key = "v", cb = tree_cb "vsplit" },
       },
-    },
+    }, ]]
   },
+  on_attach = on_attach
 }
+
+
