@@ -194,6 +194,15 @@ return packer.startup(function(use)
   -- scrollbar
   use { 'petertriho/nvim-scrollbar' }
 
+  use {
+    'EthanJWright/vs-tasks.nvim',
+    requires = {
+      'nvim-lua/popup.nvim',
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim'
+    }
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

@@ -180,6 +180,10 @@ local mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+    a = { "<cmd>lua require('telescope').extensions.vstask.tasks()<cr>", "Task"},
+    i = { "<cmd>lua require('telescope').extensions.vstask.inputs()<cr>", "Task inputs"},
+    H = { "<cmd>lua require('telescope').extensions.vstask.history()<cr>", "Task history"},
+    l = { "<cmd>lua require('telescope').extensions.vstask.launch()<cr>", "Task launch"},
   },
 }
 
